@@ -1,6 +1,7 @@
 package net.emilieathanas.tutorialmod.item;
 
 import net.emilieathanas.tutorialmod.TutorialMod;
+import net.emilieathanas.tutorialmod.item.custom.ChiselItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -26,6 +27,16 @@ public class ModItems {
                                 TutorialMod.MOD_ID, "raw_pink_garnet"
                         )
                 )
+            )
+    ));
+
+    public static final Item CHISEL = registerItem("chisel", new ChiselItem(
+            new Item.Settings().maxDamage(32).registryKey(
+                    net.minecraft.registry.RegistryKey.of(
+                            net.minecraft.registry.RegistryKeys.ITEM, Identifier.of(
+                                    TutorialMod.MOD_ID, "chisel"
+                            )
+                    )
             )
     ));
 

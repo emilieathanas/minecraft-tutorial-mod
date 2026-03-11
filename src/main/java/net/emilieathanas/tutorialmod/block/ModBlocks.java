@@ -1,6 +1,7 @@
 package net.emilieathanas.tutorialmod.block;
 
 import net.emilieathanas.tutorialmod.TutorialMod;
+import net.emilieathanas.tutorialmod.block.custom.MagicBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -56,6 +57,15 @@ public class ModBlocks {
                     Identifier.of(TutorialMod.MOD_ID, "pink_garnet_deepslate_ore")
             ))
             .strength(4f)
+            .requiresTool()
+    ));
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block", new MagicBlock(
+            AbstractBlock.Settings.create()
+            .registryKey(net.minecraft.registry.RegistryKey.of(
+                    RegistryKeys.BLOCK,
+                    Identifier.of(TutorialMod.MOD_ID, "magic_block")
+            ))
+            .strength(1f)
             .requiresTool()
     ));
 
