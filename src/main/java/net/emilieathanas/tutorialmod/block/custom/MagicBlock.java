@@ -22,12 +22,6 @@ public class MagicBlock extends Block {
 
     /**
      * onUse is called when you right click a block without any item in hand
-     * @param state
-     * @param world
-     * @param pos
-     * @param player
-     * @param hit
-     * @return
      */
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
