@@ -1,6 +1,7 @@
 package net.emilieathanas.tutorialmod.block.custom;
 
 import net.emilieathanas.tutorialmod.item.ModItems;
+import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
@@ -39,5 +40,6 @@ public class MagicBlock extends Block {
         }
         super.onSteppedOn(world, pos, state, entity);
     }
+
 }
 
