@@ -1,6 +1,7 @@
 package net.emilieathanas.tutorialmod.block.custom;
 
 import net.emilieathanas.tutorialmod.item.ModItems;
+import net.emilieathanas.tutorialmod.util.ModTags;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -34,11 +35,15 @@ public class MagicBlock extends Block {
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         if(entity instanceof ItemEntity itemEntity){
-            if(itemEntity.getStack().getItem() == ModItems.RAW_PINK_GARNET){
+            if(isValidItem(itemEntity.getStack())){
                 itemEntity.setStack(new ItemStack(Items.DIAMOND, itemEntity.getStack().getCount()));
             }
         }
         super.onSteppedOn(world, pos, state, entity);
+    }
+
+    private boolean isValidItem(ItemStack stack) {
+        return stack.isIn(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
 }
