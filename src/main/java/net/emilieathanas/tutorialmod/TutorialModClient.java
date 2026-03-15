@@ -4,10 +4,13 @@ import net.emilieathanas.tutorialmod.block.ModBlocks;
 import net.emilieathanas.tutorialmod.item.ModItems;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.input.AbstractInput;
 import net.minecraft.client.input.KeyInput;
+import net.minecraft.client.render.BlockRenderLayer;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -51,6 +54,10 @@ public class TutorialModClient implements ClientModInitializer {
                 }
             }
         });
+
+        BlockRenderLayerMap.putBlock(ModBlocks.PINK_GARNET_DOOR, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.PINK_GARNET_TRAP_DOOR, BlockRenderLayer.CUTOUT);
+
 
 
 

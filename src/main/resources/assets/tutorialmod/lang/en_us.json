@@ -16,6 +16,17 @@
   "itemgroup.tutorialmod.pink_garnet_items": "Pink Garnet Items",
   "itemgroup.tutorialmod.pink_garnet_blocks": "Pink Garnet Blocks",
 
+  "item.tutorialmod.pink_garnet_stairs": "Pink Garnet Stairs",
+  "item.tutorialmod.pink_garnet_slab": "Pink Garnet Slab",
+  "item.tutorialmod.pink_garnet_button": "Pink Garnet Button",
+  "item.tutorialmod.pink_garnet_pressure_plate": "Pink Garnet Pressure Plate",
+  "item.tutorialmod.pink_garnet_fence": "Pink Garnet Fence",
+  "item.tutorialmod.pink_garnet_fence_gate": "Pink Garnet Fence Gate",
+  "item.tutorialmod.pink_garnet_door": "Pink Garnet Door",
+  "item.tutorialmod.pink_garnet_trap_door": "Pink Garnet Trap Door",
+
+
+
   "tooltip.tutorialmod.chisel.tooltip": "Hold §9shift§r for more info!",
   "tooltip.tutorialmod.chisel.tooltip_shift": "Used to carve §9decorative§r blocks!",
   "tooltip.tutorialmod.magic_block.tooltip_shift": "Hold §9shift§r for more info!",

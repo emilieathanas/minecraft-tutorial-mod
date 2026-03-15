@@ -24,5 +24,15 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
 
+        //adding fences tag allows it to connect to wooden fences
+        valueLookupBuilder(BlockTags.WOODEN_FENCES)
+                .add(ModBlocks.PINK_GARNET_FENCE);
+
+        valueLookupBuilder(BlockTags.FENCE_GATES)
+                .add(ModBlocks.PINK_GARNET_FENCE_GATE);
+        valueLookupBuilder(BlockTags.WALLS)
+                .add(ModBlocks.PINK_GARNET_WALL);
+
+
     }
 }
