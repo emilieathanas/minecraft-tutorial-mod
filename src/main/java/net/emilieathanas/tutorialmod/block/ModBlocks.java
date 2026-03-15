@@ -88,7 +88,7 @@ public class ModBlocks {
 
 
     public static final Block PINK_GARNET_BUTTON = registerBlock("pink_garnet_button", new ButtonBlock(
-            BlockSetType.IRON, 2, AbstractBlock.Settings.create()
+            BlockSetType.IRON, 20, AbstractBlock.Settings.create()
             .registryKey(net.minecraft.registry.RegistryKey.of(
                     RegistryKeys.BLOCK,
                     Identifier.of(TutorialMod.MOD_ID, "pink_garnet_button")
