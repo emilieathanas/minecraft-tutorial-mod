@@ -109,6 +109,19 @@ public class ModItems {
             )
     ));
 
+    public static final Item PINK_GARNET_HOE = registerItem("pink_garnet_hoe", new HoeItem(
+            ModToolMaterials.PINK_GARNET_TOOL_MATERIAL, -3.0F, 0.0F,
+            new Item.Settings().registryKey(
+                    net.minecraft.registry.RegistryKey.of(
+                            net.minecraft.registry.RegistryKeys.ITEM, Identifier.of(
+                                    TutorialMod.MOD_ID, "pink_garnet_hoe"
+                            )
+                    )
+            )
+    ));
+
+
+
     public static void registerModItems(){
         TutorialMod.LOGGER.info("Registering mod items for: " + TutorialMod.MOD_ID);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> {

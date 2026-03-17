@@ -28,6 +28,8 @@ public class ModItemGroups {
                         entries.add(ModItems.PINK_GARNET_PICKAXE);
                         entries.add(ModItems.PINK_GARNET_AXE);
                         entries.add(ModItems.PINK_GARNET_SHOVEL);
+                        entries.add(ModItems.PINK_GARNET_HOE);
+
 
 
                     }).build());

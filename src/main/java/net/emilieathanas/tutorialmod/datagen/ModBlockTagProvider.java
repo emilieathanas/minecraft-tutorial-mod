@@ -20,7 +20,15 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PINK_GARNET_BLOCK)
                 .add(ModBlocks.RAW_PINK_GARNET_BLOCK)
                 .add(ModBlocks.PINK_GARNET_ORE)
-                .add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
+                .add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE)
+                .add(ModBlocks.PINK_GARNET_STAIRS)
+                .add(ModBlocks.PINK_GARNET_SLAB)
+                .add(ModBlocks.PINK_GARNET_DOOR)
+                .add(ModBlocks.PINK_GARNET_TRAP_DOOR)
+                .add(ModBlocks.PINK_GARNET_WALL)
+                .add(ModBlocks.PINK_GARNET_FENCE_GATE)
+                .add(ModBlocks.PINK_GARNET_FENCE);
+
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
 

@@ -18,8 +18,6 @@ public class ModTags {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, name));
         }
 
-
-
     }
 
     public static class Items{

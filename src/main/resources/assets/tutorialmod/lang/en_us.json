@@ -29,5 +29,11 @@
   "tooltip.tutorialmod.chisel.tooltip": "Hold §9shift§r for more info!",
   "tooltip.tutorialmod.chisel.tooltip_shift": "Used to carve §9decorative§r blocks!",
   "tooltip.tutorialmod.magic_block.tooltip_shift": "Hold §9shift§r for more info!",
-  "tooltip.tutorialmod.magic_block.tooltip": "Very very §9magical§r block!"
+  "tooltip.tutorialmod.magic_block.tooltip": "Very very §9magical§r block!",
+
+  "item.tutorialmod.pink_garnet_sword": "Pink Garnet Sword",
+  "item.tutorialmod.pink_garnet_pickaxe": "Pink Garnet Pickaxe",
+  "item.tutorialmod.pink_garnet_axe": "Pink Garnet Axe",
+  "item.tutorialmod.pink_garnet_shovel": "Pink Garnet Shovel",
+  "item.tutorialmod.pink_garnet_hoe": "Pink Garnet Hoe"
 }
