@@ -3,6 +3,7 @@ package net.emilieathanas.tutorialmod.datagen;
 import net.emilieathanas.tutorialmod.block.ModBlocks;
 import net.emilieathanas.tutorialmod.block.custom.PinkGarnetLampBlock;
 import net.emilieathanas.tutorialmod.item.ModItems;
+import net.emilieathanas.tutorialmod.item.ModToolMaterials;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.*;
@@ -59,8 +60,6 @@ public class ModModelProvider extends FabricModelProvider {
 
                         )
         );
-
-
     }
 
     @Override
@@ -70,6 +69,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CAULIFLOWER, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHISEL, Models.GENERATED);
         itemModelGenerator.register(ModItems.STARLIGHT_ASHES, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.PINK_GARNET_SWORD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PINK_GARNET_PICKAXE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PINK_GARNET_AXE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PINK_GARNET_SHOVEL, Models.GENERATED);
+
 
     }
 }

@@ -4,8 +4,7 @@ import net.emilieathanas.tutorialmod.TutorialMod;
 import net.emilieathanas.tutorialmod.item.custom.ChiselItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.DataComponentTypes;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -64,6 +63,52 @@ public class ModItems {
             )
     ));
 
+    public static final Item PINK_GARNET_SWORD = registerItem("pink_garnet_sword", new Item(
+            new Item.Settings().registryKey(
+                    net.minecraft.registry.RegistryKey.of(
+                            net.minecraft.registry.RegistryKeys.ITEM, Identifier.of(
+                                    TutorialMod.MOD_ID, "pink_garnet_sword"
+                            )
+                    )
+            )
+                    .sword(
+                            ModToolMaterials.PINK_GARNET_TOOL_MATERIAL, 1f, 1f
+                    )
+    ));
+    public static final Item PINK_GARNET_PICKAXE = registerItem("pink_garnet_pickaxe", new Item(
+            new Item.Settings().registryKey(
+                    net.minecraft.registry.RegistryKey.of(
+                            net.minecraft.registry.RegistryKeys.ITEM, Identifier.of(
+                                    TutorialMod.MOD_ID, "pink_garnet_pickaxe"
+                            )
+                    )
+            )
+                    .pickaxe(
+                            ModToolMaterials.PINK_GARNET_TOOL_MATERIAL, 1f, 1f
+                    )
+    ));
+    public static final Item PINK_GARNET_AXE = registerItem("pink_garnet_axe", new AxeItem(
+            ModToolMaterials.PINK_GARNET_TOOL_MATERIAL, 5.0F, -3.0F,
+            new Item.Settings().registryKey(
+                    net.minecraft.registry.RegistryKey.of(
+                            net.minecraft.registry.RegistryKeys.ITEM, Identifier.of(
+                                    TutorialMod.MOD_ID, "pink_garnet_axe"
+                            )
+                    )
+            ))
+    );
+
+    public static final Item PINK_GARNET_SHOVEL = registerItem("pink_garnet_shovel", new ShovelItem(
+            ModToolMaterials.PINK_GARNET_TOOL_MATERIAL, 1.4F, -3.0F,
+            new Item.Settings().registryKey(
+                    net.minecraft.registry.RegistryKey.of(
+                            net.minecraft.registry.RegistryKeys.ITEM, Identifier.of(
+                                    TutorialMod.MOD_ID, "pink_garnet_shovel"
+                            )
+                    )
+            )
+    ));
+
     public static void registerModItems(){
         TutorialMod.LOGGER.info("Registering mod items for: " + TutorialMod.MOD_ID);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> {
@@ -75,6 +120,5 @@ public class ModItems {
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name), item);
     }
-
 
 }
