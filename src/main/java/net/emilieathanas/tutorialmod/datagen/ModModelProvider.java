@@ -52,7 +52,7 @@ public class ModModelProvider extends FabricModelProvider {
                 VariantsBlockModelDefinitionCreator.of(ModBlocks.PINK_GARNET_LAMP)
                         .with(
                                 BlockStateVariantMap.models(PinkGarnetLampBlock.CLICKED, PinkGarnetLampBlock.LIT)
-                                        .register(true, true, BlockStateModelGenerator.createWeightedVariant(lampOn))
+                                        .register(true, true, BlockStateModelGenerator.createWeightedVariant(lampOff))
                                         .register(false, true, BlockStateModelGenerator.createWeightedVariant(lampOn))
                                         .register(true, false, BlockStateModelGenerator.createWeightedVariant(lampOn))
                                         .register(false, false, BlockStateModelGenerator.createWeightedVariant(lampOff))

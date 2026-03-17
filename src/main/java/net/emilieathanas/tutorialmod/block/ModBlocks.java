@@ -159,11 +159,13 @@ public class ModBlocks {
             AbstractBlock.Settings.create()
                     .registryKey(net.minecraft.registry.RegistryKey.of(
                             RegistryKeys.BLOCK,
-                            Identifier.of(TutorialMod.MOD_ID, "pink_garnet_trap_door")
+                            Identifier.of(TutorialMod.MOD_ID, "pink_garnet_lamp")
                     ))
                     .strength(1f)
                     .requiresTool()
-                    .luminance(state -> state.get(PinkGarnetLampBlock.CLICKED) ? 15 : 0)
+                    .luminance(state ->
+                            (state.get(PinkGarnetLampBlock.CLICKED) && !state.get(PinkGarnetLampBlock.LIT)) ||
+                                    (!state.get(PinkGarnetLampBlock.CLICKED) && state.get(PinkGarnetLampBlock.LIT)) ? 15 : 0)
 
     ));
 
