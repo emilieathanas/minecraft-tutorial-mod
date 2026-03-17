@@ -58,6 +58,10 @@ public class TutorialModClient implements ClientModInitializer {
             if(stack.get(ModDataComponentTypes.COORDINATES) != null){
                 lines.add(Text.literal("Last Block Changed at " + stack.get(ModDataComponentTypes.COORDINATES)));
             }
+
+            if(stack.get(ModDataComponentTypes.LAST_BLOCK_CHISELED) != null){
+                lines.add(Text.literal("Last Block Chiseled: " + stack.get(ModDataComponentTypes.LAST_BLOCK_CHISELED)));
+            }
         });
 
         BlockRenderLayerMap.putBlock(ModBlocks.PINK_GARNET_DOOR, BlockRenderLayer.CUTOUT);
