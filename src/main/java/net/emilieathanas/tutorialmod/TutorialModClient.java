@@ -1,6 +1,7 @@
 package net.emilieathanas.tutorialmod;
 
 import net.emilieathanas.tutorialmod.block.ModBlocks;
+import net.emilieathanas.tutorialmod.component.ModDataComponentTypes;
 import net.emilieathanas.tutorialmod.item.ModItems;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
@@ -53,13 +54,14 @@ public class TutorialModClient implements ClientModInitializer {
 
                 }
             }
+
+            if(stack.get(ModDataComponentTypes.COORDINATES) != null){
+                lines.add(Text.literal("Last Block Changed at " + stack.get(ModDataComponentTypes.COORDINATES)));
+            }
         });
 
         BlockRenderLayerMap.putBlock(ModBlocks.PINK_GARNET_DOOR, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.PINK_GARNET_TRAP_DOOR, BlockRenderLayer.CUTOUT);
-
-
-
 
     }
 }

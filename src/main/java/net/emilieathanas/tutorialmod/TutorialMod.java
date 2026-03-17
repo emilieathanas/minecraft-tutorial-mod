@@ -1,6 +1,7 @@
 package net.emilieathanas.tutorialmod;
 
 import net.emilieathanas.tutorialmod.block.ModBlocks;
+import net.emilieathanas.tutorialmod.component.ModDataComponentTypes;
 import net.emilieathanas.tutorialmod.item.ModItemGroups;
 import net.emilieathanas.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -27,6 +28,8 @@ public class TutorialMod implements ModInitializer {
 		FuelRegistryEvents.BUILD.register(((builder, context) -> {
 			builder.add(ModItems.STARLIGHT_ASHES, 600);
 		}));
+
+		ModDataComponentTypes.registerDataComponentTypes();
 
 	}
 }
