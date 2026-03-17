@@ -1,12 +1,14 @@
 package net.emilieathanas.tutorialmod.datagen;
 
 import net.emilieathanas.tutorialmod.block.ModBlocks;
+import net.emilieathanas.tutorialmod.block.custom.PinkGarnetLampBlock;
 import net.emilieathanas.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.minecraft.client.data.BlockStateModelGenerator;
-import net.minecraft.client.data.ItemModelGenerator;
-import net.minecraft.client.data.Models;
+import net.minecraft.client.data.*;
+import net.minecraft.util.Identifier;
+import net.minecraft.client.data.VariantsBlockModelDefinitionCreator;
+
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -35,8 +37,28 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTrapdoor(ModBlocks.PINK_GARNET_TRAP_DOOR);
 
 
+        Identifier lampOff = TexturedModel.CUBE_ALL.upload(
+                ModBlocks.PINK_GARNET_LAMP,
+                blockStateModelGenerator.modelCollector
+        );
 
+        Identifier lampOn = Models.CUBE_ALL.upload(
+                ModelIds.getBlockSubModelId(ModBlocks.PINK_GARNET_LAMP, "_on"),
+                TextureMap.all(TextureMap.getSubId(ModBlocks.PINK_GARNET_LAMP, "_on")),
+                blockStateModelGenerator.modelCollector
+        );
 
+        blockStateModelGenerator.blockStateCollector.accept(
+                VariantsBlockModelDefinitionCreator.of(ModBlocks.PINK_GARNET_LAMP)
+                        .with(
+                                BlockStateVariantMap.models(PinkGarnetLampBlock.CLICKED, PinkGarnetLampBlock.LIT)
+                                        .register(true, true, BlockStateModelGenerator.createWeightedVariant(lampOn))
+                                        .register(false, true, BlockStateModelGenerator.createWeightedVariant(lampOn))
+                                        .register(true, false, BlockStateModelGenerator.createWeightedVariant(lampOn))
+                                        .register(false, false, BlockStateModelGenerator.createWeightedVariant(lampOff))
+
+                        )
+        );
 
 
     }

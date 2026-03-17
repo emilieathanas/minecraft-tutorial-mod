@@ -2,6 +2,7 @@ package net.emilieathanas.tutorialmod.block;
 
 import net.emilieathanas.tutorialmod.TutorialMod;
 import net.emilieathanas.tutorialmod.block.custom.MagicBlock;
+import net.emilieathanas.tutorialmod.block.custom.PinkGarnetLampBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -152,6 +153,18 @@ public class ModBlocks {
             .strength(2f)
             .requiresTool()
             .nonOpaque()
+    ));
+
+    public static final Block PINK_GARNET_LAMP = registerBlock("pink_garnet_lamp", new PinkGarnetLampBlock(
+            AbstractBlock.Settings.create()
+                    .registryKey(net.minecraft.registry.RegistryKey.of(
+                            RegistryKeys.BLOCK,
+                            Identifier.of(TutorialMod.MOD_ID, "pink_garnet_trap_door")
+                    ))
+                    .strength(1f)
+                    .requiresTool()
+                    .luminance(state -> state.get(PinkGarnetLampBlock.CLICKED) ? 15 : 0)
+
     ));
 
     public static void registerModBlocks(){

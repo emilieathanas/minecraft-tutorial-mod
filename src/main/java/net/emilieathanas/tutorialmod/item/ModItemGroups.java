@@ -46,6 +46,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PINK_GARNET_SLAB);
                         entries.add(ModBlocks.PINK_GARNET_STAIRS);
 
+                        entries.add(ModBlocks.PINK_GARNET_LAMP);
+
 
 
 
