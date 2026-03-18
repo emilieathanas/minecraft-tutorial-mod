@@ -6,6 +6,7 @@ import net.emilieathanas.tutorialmod.item.custom.HammerItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.*;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -131,6 +132,20 @@ public class ModItems {
                     )
                     .pickaxe(
                             ModToolMaterials.PINK_GARNET_TOOL_MATERIAL, 7, -3.4f
+                    )
+    ));
+
+    public static final Item PINK_GARNET_HELMET = registerItem("pink_garnet_helmet", new Item(
+            new Item.Settings().registryKey(
+                    net.minecraft.registry.RegistryKey.of(
+                            net.minecraft.registry.RegistryKeys.ITEM, Identifier.of(
+                                    TutorialMod.MOD_ID, "pink_garnet_helmet"
+                            )
+                    )
+            )
+                    .armor(
+                            ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, EquipmentType.HELMET
+
                     )
     ));
 
