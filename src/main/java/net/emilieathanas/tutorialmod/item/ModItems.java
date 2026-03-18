@@ -2,6 +2,7 @@ package net.emilieathanas.tutorialmod.item;
 
 import net.emilieathanas.tutorialmod.TutorialMod;
 import net.emilieathanas.tutorialmod.item.custom.ChiselItem;
+import net.emilieathanas.tutorialmod.item.custom.HammerItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.*;
@@ -118,6 +119,19 @@ public class ModItems {
                             )
                     )
             )
+    ));
+
+    public static final Item PINK_GARNET_HAMMER = registerItem("pink_garnet_hammer", new HammerItem(
+            new Item.Settings().registryKey(
+                            net.minecraft.registry.RegistryKey.of(
+                                    net.minecraft.registry.RegistryKeys.ITEM, Identifier.of(
+                                            TutorialMod.MOD_ID, "pink_garnet_hammer"
+                                    )
+                            )
+                    )
+                    .pickaxe(
+                            ModToolMaterials.PINK_GARNET_TOOL_MATERIAL, 7, -3.4f
+                    )
     ));
 
 

@@ -4,8 +4,10 @@ import net.emilieathanas.tutorialmod.block.ModBlocks;
 import net.emilieathanas.tutorialmod.component.ModDataComponentTypes;
 import net.emilieathanas.tutorialmod.item.ModItemGroups;
 import net.emilieathanas.tutorialmod.item.ModItems;
+import net.emilieathanas.tutorialmod.util.HammerUsageEvent;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.minecraft.item.FuelRegistry;
 import net.minecraft.item.Item;
@@ -30,6 +32,8 @@ public class TutorialMod implements ModInitializer {
 		}));
 
 		ModDataComponentTypes.registerDataComponentTypes();
+
+		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
 	}
 }
