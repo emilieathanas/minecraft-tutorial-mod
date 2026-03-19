@@ -12,7 +12,6 @@ import net.minecraft.util.Identifier;
 import java.util.Map;
 
 public class ModArmorMaterials {
-    public static final RegistryKey<? extends Registry<EquipmentAsset>> REGISTRY_KEY = RegistryKey.ofRegistry(Identifier.of(TutorialMod.MOD_ID, "pink_garnet"));
     public static final RegistryKey<EquipmentAsset> PINK_GARNET = register("pink_garnet");
 
 
@@ -44,7 +43,7 @@ public class ModArmorMaterials {
     }
 
     static RegistryKey<EquipmentAsset> register(String name) {
-        return RegistryKey.of(REGISTRY_KEY, Identifier.of(TutorialMod.MOD_ID));
+        return RegistryKey.of(EquipmentAssetKeys.REGISTRY_KEY, Identifier.of(TutorialMod.MOD_ID, name));
     }
 
 }

@@ -1,10 +1,12 @@
 package net.emilieathanas.tutorialmod.datagen;
 
 import net.emilieathanas.tutorialmod.block.ModBlocks;
+import net.emilieathanas.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -40,6 +42,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PINK_GARNET_FENCE_GATE);
         valueLookupBuilder(BlockTags.WALLS)
                 .add(ModBlocks.PINK_GARNET_WALL);
+
+
 
 
     }

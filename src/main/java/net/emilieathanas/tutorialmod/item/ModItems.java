@@ -149,6 +149,49 @@ public class ModItems {
                     )
     ));
 
+    public static final Item PINK_GARNET_CHESTPLATE = registerItem("pink_garnet_chestplate", new Item(
+            new Item.Settings().registryKey(
+                    net.minecraft.registry.RegistryKey.of(
+                            net.minecraft.registry.RegistryKeys.ITEM, Identifier.of(
+                                    TutorialMod.MOD_ID, "pink_garnet_chestplate"
+                            )
+                    )
+            )
+                    .armor(
+                            ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, EquipmentType.CHESTPLATE
+
+                    )
+    ));
+
+
+    public static final Item PINK_GARNET_LEGGINGS = registerItem("pink_garnet_leggings", new Item(
+            new Item.Settings().registryKey(
+                    net.minecraft.registry.RegistryKey.of(
+                            net.minecraft.registry.RegistryKeys.ITEM, Identifier.of(
+                                    TutorialMod.MOD_ID, "pink_garnet_leggings"
+                            )
+                    )
+            )
+                    .armor(
+                            ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, EquipmentType.LEGGINGS
+
+                    )
+    ));
+
+    public static final Item PINK_GARNET_BOOTS = registerItem("pink_garnet_boots", new Item(
+            new Item.Settings().registryKey(
+                    net.minecraft.registry.RegistryKey.of(
+                            net.minecraft.registry.RegistryKeys.ITEM, Identifier.of(
+                                    TutorialMod.MOD_ID, "pink_garnet_boots"
+                            )
+                    )
+            )
+                    .armor(
+                            ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, EquipmentType.BOOTS
+
+                    )
+    ));
+
 
 
     public static void registerModItems(){

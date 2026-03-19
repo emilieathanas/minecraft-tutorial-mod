@@ -2,6 +2,7 @@ package net.emilieathanas.tutorialmod.datagen;
 
 import net.emilieathanas.tutorialmod.block.ModBlocks;
 import net.emilieathanas.tutorialmod.block.custom.PinkGarnetLampBlock;
+import net.emilieathanas.tutorialmod.item.ModArmorMaterials;
 import net.emilieathanas.tutorialmod.item.ModItems;
 import net.emilieathanas.tutorialmod.item.ModToolMaterials;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
@@ -76,7 +77,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.PINK_GARNET_SHOVEL, Models.GENERATED);
         itemModelGenerator.register(ModItems.PINK_GARNET_HOE, Models.GENERATED);
         itemModelGenerator.register(ModItems.PINK_GARNET_HAMMER, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PINK_GARNET_HELMET, Models.GENERATED);
+
+        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_HELMET, ModArmorMaterials.PINK_GARNET, Identifier.ofVanilla("trims/items/helmet"), false);
+        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_CHESTPLATE, ModArmorMaterials.PINK_GARNET, Identifier.ofVanilla("trims/items/helmet"), false);
+        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_LEGGINGS, ModArmorMaterials.PINK_GARNET, Identifier.ofVanilla("trims/items/helmet"), false);
+        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_BOOTS, ModArmorMaterials.PINK_GARNET, Identifier.ofVanilla("trims/items/helmet"), false);
 
     }
 }
