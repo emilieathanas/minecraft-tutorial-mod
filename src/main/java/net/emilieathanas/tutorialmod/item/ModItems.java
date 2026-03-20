@@ -3,6 +3,7 @@ package net.emilieathanas.tutorialmod.item;
 import net.emilieathanas.tutorialmod.TutorialMod;
 import net.emilieathanas.tutorialmod.item.custom.ChiselItem;
 import net.emilieathanas.tutorialmod.item.custom.HammerItem;
+import net.emilieathanas.tutorialmod.item.custom.ModArmorItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.*;
@@ -135,7 +136,7 @@ public class ModItems {
                     )
     ));
 
-    public static final Item PINK_GARNET_HELMET = registerItem("pink_garnet_helmet", new Item(
+    public static final Item PINK_GARNET_HELMET = registerItem("pink_garnet_helmet", new ModArmorItem(
             new Item.Settings().registryKey(
                     net.minecraft.registry.RegistryKey.of(
                             net.minecraft.registry.RegistryKeys.ITEM, Identifier.of(

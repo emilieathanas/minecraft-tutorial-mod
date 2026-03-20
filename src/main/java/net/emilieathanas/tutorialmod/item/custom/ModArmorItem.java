@@ -1,7 +1,6 @@
 package net.emilieathanas.tutorialmod.item.custom;
 
 import com.google.common.collect.ImmutableMap;
-import net.emilieathanas.tutorialmod.item.ModArmorMaterials;
 import net.emilieathanas.tutorialmod.item.ModItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
@@ -10,22 +9,24 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.equipment.ArmorMaterial;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
 
 import java.util.List;
 import java.util.Map;
 
+import static net.emilieathanas.tutorialmod.item.ModItems.PINK_GARNET;
+
 public class ModArmorItem extends Item{
-    private static final Map<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>> MATERIAL_TO_EFFECT_MAP =
-            (new ImmutableMap.Builder<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>>())
-                    .put(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL,
+    public enum ArmorSet { PINK_GARNET }
+
+    private static final Map<ArmorSet, List<StatusEffectInstance>> MATERIAL_TO_EFFECT_MAP =
+            (new ImmutableMap.Builder<ArmorSet, List<StatusEffectInstance>>())
+                    .put(ArmorSet.PINK_GARNET,
                             List.of(new StatusEffectInstance(StatusEffects.HASTE, 400, 2, false, false),
                                     new StatusEffectInstance(StatusEffects.JUMP_BOOST, 400, 1, false, false))).build();
 
-    public ModArmorItem(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
-        super(material, type, settings);
+    public ModArmorItem(Settings settings) {
+        super(settings);
     }
 
     public void inventoryTick(ItemStack stack, ServerWorld world, Entity entity, EquipmentSlot slot) {
@@ -46,17 +47,17 @@ public class ModArmorItem extends Item{
      * @param player this player
      */
     private void evaluateArmorEffects(PlayerEntity player) {
-        for (Map.Entry<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
-            RegistryEntry<ArmorMaterial> mapArmorMaterial = entry.getKey();
+        for (Map.Entry<ArmorSet, List<StatusEffectInstance>> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
+            ArmorSet mapArmorMaterial = entry.getKey();
             List<StatusEffectInstance> mapStatusEffects = entry.getValue();
 
             if(hasCorrectArmorOn(mapArmorMaterial, player)) {
-                addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffects);
+                addStatusEffectForMaterial(player, mapStatusEffects);
             }
         }
     }
 
-    private void addStatusEffectForMaterial(PlayerEntity player, RegistryEntry<ArmorMaterial> mapArmorMaterial, List<StatusEffectInstance> mapStatusEffect) {
+    private void addStatusEffectForMaterial(PlayerEntity player, List<StatusEffectInstance> mapStatusEffect) {
         boolean hasPlayerEffect = mapStatusEffect.stream().allMatch(statusEffectInstance -> player.hasStatusEffect(statusEffectInstance.getEffectType()));
 
         if(!hasPlayerEffect) {
@@ -90,7 +91,7 @@ public class ModArmorItem extends Item{
      * @param player player to check
      * @return true if all armor items are of pink garnet
      */
-    private boolean hasCorrectArmorOn(RegistryEntry<ArmorMaterial> material, PlayerEntity player) {
+    private boolean hasCorrectArmorOn(ArmorSet material, PlayerEntity player) {
         if(material == null){
             return false;
         }
