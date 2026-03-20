@@ -193,7 +193,17 @@ public class ModItems {
                     )
     ));
 
+    public static final Item PINK_GARNET_HORSE_ARMOR = registerItem("pink_garnet_horse_armor", new Item(
+            new Item.Settings().registryKey(
+                    net.minecraft.registry.RegistryKey.of(
+                            net.minecraft.registry.RegistryKeys.ITEM, Identifier.of(
+                                    TutorialMod.MOD_ID, "pink_garnet_horse_armor"
+                            )
+                    )
+            )
+                    .horseArmor(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL)
 
+    ));
 
     public static void registerModItems(){
         TutorialMod.LOGGER.info("Registering mod items for: " + TutorialMod.MOD_ID);
