@@ -2,17 +2,21 @@ package net.emilieathanas.tutorialmod.datagen;
 
 import net.emilieathanas.tutorialmod.TutorialMod;
 import net.emilieathanas.tutorialmod.block.ModBlocks;
+import net.emilieathanas.tutorialmod.item.ModArmorMaterials;
 import net.emilieathanas.tutorialmod.item.ModItems;
+import net.emilieathanas.tutorialmod.trim.ModTrimPatterns;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.data.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.Recipe;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
@@ -57,6 +61,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 createDoorRecipe(ModBlocks.PINK_GARNET_DOOR, Ingredient.ofItem(ModBlocks.PINK_GARNET_BLOCK));
 
+                Item bloomingmaroonSmithingTemplate = ModItems.BLOOMINGMAROON_ARMOR_TRIM_SMITHING_TEMPLATE;
+                offerSmithingTrimRecipe(bloomingmaroonSmithingTemplate, ModTrimPatterns.BLOOMINGMAROON, RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(bloomingmaroonSmithingTemplate.getTranslationKey().substring(22) + "smithing_trim")));
 
             }
         };

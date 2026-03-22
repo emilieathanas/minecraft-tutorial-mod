@@ -1,7 +1,7 @@
 package net.emilieathanas.tutorialmod;
 
 import net.emilieathanas.tutorialmod.datagen.*;
-import net.emilieathanas.tutorialmod.trim.ModTrimMaterials;
+import net.emilieathanas.tutorialmod.trim.ModTrimPatterns;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
@@ -18,6 +18,11 @@ public class TutorialModDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
 
+	}
+
+	@Override
+	public void buildRegistry(RegistryBuilder registryBuilder) {
+		registryBuilder.addRegistry(RegistryKeys.TRIM_PATTERN, ModTrimPatterns::bootstrap);
 	}
 
 }

@@ -10,8 +10,12 @@ import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
+
+import java.util.function.Function;
 
 import static net.minecraft.item.Items.register;
 
@@ -210,16 +214,15 @@ public class ModItems {
     ));
 
 
-    public static final Item BLOOMINGMAROON_ARMOR_TRIM_SMITHING_TEMPLATE = Registry.register(
-            Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, "bloomingmaroon_armor_trim_smithing_template"),
-            SmithingTemplateItem.of(Identifier.of(TutorialMod.MOD_ID, "bloomingmaroon_armor_trim_smithing_template")));
+    public static final SmithingTemplateItem BLOOMINGMAROON_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplate("bloomingmaroon_armor_trim_smithing_template", settings -> SmithingTemplateItem.of(settings.rarity(Rarity.RARE)));
 
 
-    private static SmithingTemplateItem registerSmithingTemplate(String name){
+    private static SmithingTemplateItem registerSmithingTemplate(String name, Function<Item.Settings, SmithingTemplateItem> function){
         Identifier id = Identifier.of(TutorialMod.MOD_ID, name);
-        return Registry.register(Registries.ITEM, id, SmithingTemplateItem.of(id));
-    }
+        return Registry.register(Registries.ITEM, id,
+                function.apply(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, id))));
 
+    }
 
     public static void registerModItems(){
         TutorialMod.LOGGER.info("Registering mod items for: " + TutorialMod.MOD_ID);
