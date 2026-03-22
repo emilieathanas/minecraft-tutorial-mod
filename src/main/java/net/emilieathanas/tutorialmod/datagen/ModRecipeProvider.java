@@ -56,6 +56,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter, "raw_pink_garnet_from_magic_block");
 
                 createDoorRecipe(ModBlocks.PINK_GARNET_DOOR, Ingredient.ofItem(ModBlocks.PINK_GARNET_BLOCK));
+
+
             }
         };
     }

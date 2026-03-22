@@ -11,6 +11,9 @@ import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
+
+import static net.minecraft.item.Items.register;
 
 public class ModItems {
 
@@ -193,6 +196,7 @@ public class ModItems {
                     )
     ));
 
+
     public static final Item PINK_GARNET_HORSE_ARMOR = registerItem("pink_garnet_horse_armor", new Item(
             new Item.Settings().registryKey(
                     net.minecraft.registry.RegistryKey.of(
@@ -204,6 +208,18 @@ public class ModItems {
                     .horseArmor(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL)
 
     ));
+
+
+    public static final Item BLOOMINGMAROON_ARMOR_TRIM_SMITHING_TEMPLATE = Registry.register(
+            Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, "bloomingmaroon_armor_trim_smithing_template"),
+            SmithingTemplateItem.of(Identifier.of(TutorialMod.MOD_ID, "bloomingmaroon_armor_trim_smithing_template")));
+
+
+    private static SmithingTemplateItem registerSmithingTemplate(String name){
+        Identifier id = Identifier.of(TutorialMod.MOD_ID, name);
+        return Registry.register(Registries.ITEM, id, SmithingTemplateItem.of(id));
+    }
+
 
     public static void registerModItems(){
         TutorialMod.LOGGER.info("Registering mod items for: " + TutorialMod.MOD_ID);
