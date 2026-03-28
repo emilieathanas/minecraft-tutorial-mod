@@ -4,10 +4,12 @@ import net.emilieathanas.tutorialmod.TutorialMod;
 import net.emilieathanas.tutorialmod.item.custom.ChiselItem;
 import net.emilieathanas.tutorialmod.item.custom.HammerItem;
 import net.emilieathanas.tutorialmod.item.custom.ModArmorItem;
+import net.emilieathanas.tutorialmod.trim.ModTrimMaterials;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
+import net.minecraft.item.equipment.trim.ArmorTrimMaterial;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -22,13 +24,15 @@ import static net.minecraft.item.Items.register;
 public class ModItems {
 
     public static final Item PINK_GARNET = registerItem("pink_garnet", new Item(
-            new Item.Settings().registryKey(
+            new Item.Settings().trimMaterial(ModTrimMaterials.PINK_GARNET).registryKey(
                 net.minecraft.registry.RegistryKey.of(
-                        net.minecraft.registry.RegistryKeys.ITEM, Identifier.of(
+                        RegistryKeys.ITEM, Identifier.of(
                                 TutorialMod.MOD_ID, "pink_garnet"
                         )
                 )
             )
+
+
     ));
     public static final Item RAW_PINK_GARNET = registerItem("raw_pink_garnet", new Item(
             new Item.Settings().registryKey(
@@ -37,7 +41,7 @@ public class ModItems {
                                 TutorialMod.MOD_ID, "raw_pink_garnet"
                         )
                 )
-            )
+            ).trimMaterial(ModTrimMaterials.PINK_GARNET)
     ));
 
     public static final Item CHISEL = registerItem("chisel", new ChiselItem(

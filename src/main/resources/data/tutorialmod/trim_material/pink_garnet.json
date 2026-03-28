@@ -1,8 +1,0 @@
-{
-  "asset_name": "pink_garnet",
-  "description": {
-    "translate": "trim_material.tutorialmod.pink_garnet"
-  },
-  "ingredient": "tutorialmod:pink_garnet",
-  "item_model_index": 0.8
-}

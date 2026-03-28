@@ -62,7 +62,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 createDoorRecipe(ModBlocks.PINK_GARNET_DOOR, Ingredient.ofItem(ModBlocks.PINK_GARNET_BLOCK));
 
                 Item bloomingmaroonSmithingTemplate = ModItems.BLOOMINGMAROON_ARMOR_TRIM_SMITHING_TEMPLATE;
-                offerSmithingTrimRecipe(bloomingmaroonSmithingTemplate, ModTrimPatterns.BLOOMINGMAROON, RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(bloomingmaroonSmithingTemplate.getTranslationKey().substring(22) + "smithing_trim")));
+                offerSmithingTrimRecipe(bloomingmaroonSmithingTemplate, ModTrimPatterns.BLOOMINGMAROON, RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(bloomingmaroonSmithingTemplate.getTranslationKey().substring(17) + "_smithing_trim")));
+                offerSmithingTemplateCopyingRecipe(ModItems.BLOOMINGMAROON_ARMOR_TRIM_SMITHING_TEMPLATE, ModBlocks.PINK_GARNET_BLOCK);
 
             }
         };
@@ -70,6 +71,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public String getName() {
-        return "";
+        return "Tutorial Mod Recipes";
     }
 }

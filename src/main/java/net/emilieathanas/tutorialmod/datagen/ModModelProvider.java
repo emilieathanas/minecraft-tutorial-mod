@@ -71,12 +71,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CHISEL, Models.GENERATED);
         itemModelGenerator.register(ModItems.STARLIGHT_ASHES, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.PINK_GARNET_SWORD, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PINK_GARNET_PICKAXE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PINK_GARNET_AXE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PINK_GARNET_SHOVEL, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PINK_GARNET_HOE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PINK_GARNET_HAMMER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PINK_GARNET_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PINK_GARNET_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PINK_GARNET_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PINK_GARNET_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PINK_GARNET_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PINK_GARNET_HAMMER, Models.HANDHELD);
 
         itemModelGenerator.register(ModItems.PINK_GARNET_HORSE_ARMOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.BLOOMINGMAROON_ARMOR_TRIM_SMITHING_TEMPLATE, Models.GENERATED);

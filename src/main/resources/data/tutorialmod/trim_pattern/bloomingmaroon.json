@@ -1,8 +1,0 @@
-{
-  "asset_id": "tutorialmod:bloomingmaroon",
-  "description": {
-    "translate": "trim_pattern.tutorialmod.bloomingmaroon"
-  },
-  "template_item": "tutorialmod:bloomingmaroon_armor_trim_smithing_template",
-  "decal": false
-}

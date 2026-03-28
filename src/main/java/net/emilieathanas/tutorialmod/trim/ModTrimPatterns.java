@@ -16,13 +16,13 @@ public class ModTrimPatterns {
         return RegistryKey.of(RegistryKeys.TRIM_PATTERN, Identifier.of(TutorialMod.MOD_ID, id));
     }
 
-    private static void register(Registerable<ArmorTrimPattern> registry, RegistryKey<ArmorTrimPattern> key){
-        ArmorTrimPattern armorTrimPattern = new ArmorTrimPattern(key.getValue(),
-                Text.translatable(Util.createTranslationKey("trim_pattern", key.getValue())), false);
+    public static void register(Registerable<ArmorTrimPattern> registry, RegistryKey<ArmorTrimPattern> key) {
+        ArmorTrimPattern armorTrimPattern = new ArmorTrimPattern(key.getValue(), Text.translatable(Util.createTranslationKey("trim_pattern", key.getValue())), false);
         registry.register(key, armorTrimPattern);
     }
 
-    public static void bootstrap(Registerable<ArmorTrimPattern> registry){
-        register(registry, BLOOMINGMAROON);
+    public static void bootstrap(Registerable<ArmorTrimPattern> registerable) {
+        register(registerable, BLOOMINGMAROON);
     }
+
 }
