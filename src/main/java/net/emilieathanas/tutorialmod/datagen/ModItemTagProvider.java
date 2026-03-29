@@ -33,8 +33,5 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.PINK_GARNET_LEGGINGS)
                 .add(ModItems.PINK_GARNET_BOOTS);
 
-        valueLookupBuilder(ItemTags.TRIM_MATERIALS)
-                .add(ModItems.PINK_GARNET);
-
     }
 }
