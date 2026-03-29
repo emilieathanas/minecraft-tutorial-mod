@@ -1,8 +1,10 @@
 package net.emilieathanas.tutorialmod.trim;
 
 import net.emilieathanas.tutorialmod.TutorialMod;
+import net.emilieathanas.tutorialmod.item.ModItems;
 import net.minecraft.item.equipment.trim.ArmorTrimAssets;
 import net.minecraft.item.equipment.trim.ArmorTrimMaterial;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;

@@ -44,7 +44,9 @@
   "item.tutorialmod.pink_garnet_boots": "Pink Garnet Boots",
 
   "item.tutorialmod.pink_garnet_horse_armor": "Pink Garnet Horse Armor",
-  "item.tutorialmod.bloomingmaroon_armor_trim_smithing_template": "Bloomingmaroon Armor Trim Smithing Template"
+  "item.tutorialmod.bloomingmaroon_armor_trim_smithing_template": "Bloomingmaroon Armor Trim",
+  "trim_pattern.tutorialmod.bloomingmaroon": "Bloomingmaroon Armor Trim",
+  "trim_material.tutorialmod.pink_garnet": "Pink Garnet Material"
 
 
 }

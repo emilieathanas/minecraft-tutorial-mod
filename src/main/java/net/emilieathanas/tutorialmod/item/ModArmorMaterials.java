@@ -2,6 +2,7 @@ package net.emilieathanas.tutorialmod.item;
 
 import com.google.common.collect.Maps;
 import net.emilieathanas.tutorialmod.TutorialMod;
+import net.emilieathanas.tutorialmod.trim.ModEquipmentAssetKeys;
 import net.emilieathanas.tutorialmod.util.ModTags;
 import net.minecraft.item.equipment.*;
 import net.minecraft.registry.Registry;
@@ -12,8 +13,6 @@ import net.minecraft.util.Identifier;
 import java.util.Map;
 
 public class ModArmorMaterials {
-    public static final RegistryKey<EquipmentAsset> PINK_GARNET = register("pink_garnet");
-
 
     public static final ArmorMaterial PINK_GARNET_ARMOR_MATERIAL = new ArmorMaterial(
             35,
@@ -23,7 +22,7 @@ public class ModArmorMaterials {
             2.0F,
             0.0F,
             ModTags.Items.REPAIRS_PINK_GARNET_ARMOR,
-            PINK_GARNET);
+            ModEquipmentAssetKeys.PINK_GARNET);
 
     private static Map<EquipmentType, Integer> createDefenseMap(int bootsDefense, int leggingsDefense, int chestplateDefense, int helmetDefense, int bodyDefense) {
         return Maps.newEnumMap(

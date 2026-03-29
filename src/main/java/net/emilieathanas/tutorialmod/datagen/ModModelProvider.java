@@ -5,6 +5,7 @@ import net.emilieathanas.tutorialmod.block.custom.PinkGarnetLampBlock;
 import net.emilieathanas.tutorialmod.item.ModArmorMaterials;
 import net.emilieathanas.tutorialmod.item.ModItems;
 import net.emilieathanas.tutorialmod.item.ModToolMaterials;
+import net.emilieathanas.tutorialmod.trim.ModEquipmentAssetKeys;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.*;
@@ -81,10 +82,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.PINK_GARNET_HORSE_ARMOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.BLOOMINGMAROON_ARMOR_TRIM_SMITHING_TEMPLATE, Models.GENERATED);
 
-        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_HELMET, ModArmorMaterials.PINK_GARNET, Identifier.ofVanilla("trims/items/helmet"), false);
-        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_CHESTPLATE, ModArmorMaterials.PINK_GARNET, Identifier.ofVanilla("trims/items/helmet"), false);
-        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_LEGGINGS, ModArmorMaterials.PINK_GARNET, Identifier.ofVanilla("trims/items/helmet"), false);
-        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_BOOTS, ModArmorMaterials.PINK_GARNET, Identifier.ofVanilla("trims/items/helmet"), false);
+        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_HELMET, ModEquipmentAssetKeys.PINK_GARNET, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_CHESTPLATE, ModEquipmentAssetKeys.PINK_GARNET, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_LEGGINGS, ModEquipmentAssetKeys.PINK_GARNET, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_BOOTS, ModEquipmentAssetKeys.PINK_GARNET, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
 
     }
 }
