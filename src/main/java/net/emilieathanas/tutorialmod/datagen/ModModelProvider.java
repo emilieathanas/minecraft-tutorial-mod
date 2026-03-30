@@ -2,6 +2,7 @@ package net.emilieathanas.tutorialmod.datagen;
 
 import net.emilieathanas.tutorialmod.block.ModBlocks;
 import net.emilieathanas.tutorialmod.block.custom.PinkGarnetLampBlock;
+import net.emilieathanas.tutorialmod.component.ModDataComponentTypes;
 import net.emilieathanas.tutorialmod.item.ModArmorMaterials;
 import net.emilieathanas.tutorialmod.item.ModItems;
 import net.emilieathanas.tutorialmod.item.ModToolMaterials;
@@ -9,6 +10,9 @@ import net.emilieathanas.tutorialmod.trim.ModEquipmentAssetKeys;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.*;
+import net.minecraft.client.render.item.model.ItemModel;
+import net.minecraft.client.render.item.property.bool.HasComponentProperty;
+import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.client.data.VariantsBlockModelDefinitionCreator;
 
@@ -69,7 +73,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.PINK_GARNET, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_PINK_GARNET, Models.GENERATED);
         itemModelGenerator.register(ModItems.CAULIFLOWER, Models.GENERATED);
-        itemModelGenerator.register(ModItems.CHISEL, Models.GENERATED);
+       // itemModelGenerator.register(ModItems.CHISEL, Models.GENERATED);
         itemModelGenerator.register(ModItems.STARLIGHT_ASHES, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.PINK_GARNET_SWORD, Models.HANDHELD);
@@ -86,6 +90,18 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(ModItems.PINK_GARNET_CHESTPLATE, ModEquipmentAssetKeys.PINK_GARNET, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.PINK_GARNET_LEGGINGS, ModEquipmentAssetKeys.PINK_GARNET, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.PINK_GARNET_BOOTS, ModEquipmentAssetKeys.PINK_GARNET, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+
+        //model predicates
+        Item chisel = ModItems.CHISEL;
+        ItemModel.Unbaked unusedChisel = ItemModels.basic(itemModelGenerator.upload(chisel, Models.GENERATED));
+        ItemModel.Unbaked usedChisel = ItemModels.basic(itemModelGenerator.registerSubModel(chisel, "_used", Models.GENERATED));
+
+        itemModelGenerator.registerCondition(
+                chisel,
+                new HasComponentProperty(ModDataComponentTypes.COORDINATES, true),
+                usedChisel,
+                unusedChisel
+        );
 
     }
 }
