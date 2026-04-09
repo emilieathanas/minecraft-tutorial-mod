@@ -218,6 +218,17 @@ public class ModItems {
     ));
 
 
+    public static final Item BLOOM_BOW = registerItem("bloom_bow", new BowItem(
+            new Item.Settings().maxDamage(250).registryKey(
+                    net.minecraft.registry.RegistryKey.of(
+                            RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "bloom_bow")
+                    )
+            )
+    ));
+
+
+
+
     public static final SmithingTemplateItem BLOOMINGMAROON_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplate("bloomingmaroon_armor_trim_smithing_template", settings -> SmithingTemplateItem.of(settings.rarity(Rarity.RARE)));
 
 

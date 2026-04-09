@@ -3,7 +3,10 @@
 	"package": "net.emilieathanas.tutorialmod.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"TutorialFirstMixin"
+	],
+	"client": [
+		"AbstractClientPlayerEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

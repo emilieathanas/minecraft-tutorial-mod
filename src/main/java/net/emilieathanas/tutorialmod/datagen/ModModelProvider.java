@@ -12,6 +12,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.*;
 import net.minecraft.client.render.item.model.ItemModel;
 import net.minecraft.client.render.item.property.bool.HasComponentProperty;
+import net.minecraft.client.render.item.property.numeric.UseDurationProperty;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.client.data.VariantsBlockModelDefinitionCreator;
@@ -102,6 +103,21 @@ public class ModModelProvider extends FabricModelProvider {
                 usedChisel,
                 unusedChisel
         );
+
+        Item bloom_bow = ModItems.BLOOM_BOW;
+        ItemModel.Unbaked unbakedBow = ItemModels.basic(itemModelGenerator.upload(bloom_bow, Models.GENERATED));
+        ItemModel.Unbaked unbakedBow2 = ItemModels.basic(itemModelGenerator.registerSubModel(bloom_bow, "_pulling_0", Models.GENERATED));
+        ItemModel.Unbaked unbakedBow3 = ItemModels.basic(itemModelGenerator.registerSubModel(bloom_bow, "_pulling_1", Models.GENERATED));
+        ItemModel.Unbaked unbakedBow4 = ItemModels.basic(itemModelGenerator.registerSubModel(bloom_bow, "_pulling_2", Models.GENERATED));
+
+        itemModelGenerator.registerCondition(
+                bloom_bow,
+                ItemModels.usingItemProperty(),
+                ItemModels.rangeDispatch(new UseDurationProperty(false), 0.05f, unbakedBow2, ItemModels.rangeDispatchEntry(unbakedBow3, 0.65f), ItemModels.rangeDispatchEntry(unbakedBow4, 0.9f) ),
+                unbakedBow
+
+        );
+
 
     }
 }
