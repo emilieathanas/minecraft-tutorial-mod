@@ -47,7 +47,14 @@
   "item.tutorialmod.pink_garnet_horse_armor": "Pink Garnet Horse Armor",
   "item.tutorialmod.bloomingmaroon_armor_trim_smithing_template": "Bloomingmaroon Armor Trim",
   "trim_pattern.tutorialmod.bloomingmaroon": "Bloomingmaroon Armor Trim",
-  "trim_material.tutorialmod.pink_garnet": "Pink Garnet Material"
+  "trim_material.tutorialmod.pink_garnet": "Pink Garnet Material",
+
+  "sounds.tutorialmod.chisel_use": "Chisel scrapes",
+  "sounds.tutorialmod.magic_block_break": "Magic block breaks",
+  "sounds.tutorialmod.magic_block_fall": "Magic block falls",
+  "sounds.tutorialmod.magic_block_hit": "Magic block hit",
+  "sounds.tutorialmod.magic_block_place": "Magic block placed",
+  "sounds.tutorialmod.magic_block_step": "Steps on magic block"
 
 
 }

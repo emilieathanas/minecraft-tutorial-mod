@@ -3,6 +3,7 @@ package net.emilieathanas.tutorialmod.block;
 import net.emilieathanas.tutorialmod.TutorialMod;
 import net.emilieathanas.tutorialmod.block.custom.MagicBlock;
 import net.emilieathanas.tutorialmod.block.custom.PinkGarnetLampBlock;
+import net.emilieathanas.tutorialmod.sounds.ModSounds;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -66,6 +67,7 @@ public class ModBlocks {
             ))
             .strength(1f)
             .requiresTool()
+                    .sounds(ModSounds.MAGIC_BLOCK_SOUNDS)
     ));
 
     public static final Block PINK_GARNET_STAIRS = registerBlock("pink_garnet_stairs", new StairsBlock(

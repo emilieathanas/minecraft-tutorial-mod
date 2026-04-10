@@ -4,6 +4,7 @@ import net.emilieathanas.tutorialmod.block.ModBlocks;
 import net.emilieathanas.tutorialmod.component.ModDataComponentTypes;
 import net.emilieathanas.tutorialmod.item.ModItemGroups;
 import net.emilieathanas.tutorialmod.item.ModItems;
+import net.emilieathanas.tutorialmod.sounds.ModSounds;
 import net.emilieathanas.tutorialmod.util.HammerUsageEvent;
 import net.fabricmc.api.ModInitializer;
 
@@ -26,8 +27,9 @@ public class TutorialMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
+		ModSounds.registerSounds();
 
-		FuelRegistryEvents.BUILD.register(((builder, context) -> {
+        FuelRegistryEvents.BUILD.register(((builder, context) -> {
 			builder.add(ModItems.STARLIGHT_ASHES, 600);
 		}));
 
