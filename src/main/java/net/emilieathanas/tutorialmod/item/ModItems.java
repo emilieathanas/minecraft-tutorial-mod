@@ -4,6 +4,7 @@ import net.emilieathanas.tutorialmod.TutorialMod;
 import net.emilieathanas.tutorialmod.item.custom.ChiselItem;
 import net.emilieathanas.tutorialmod.item.custom.HammerItem;
 import net.emilieathanas.tutorialmod.item.custom.ModArmorItem;
+import net.emilieathanas.tutorialmod.sounds.ModSounds;
 import net.emilieathanas.tutorialmod.trim.ModTrimMaterials;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.DataComponentTypes;
@@ -231,6 +232,13 @@ public class ModItems {
 
     public static final SmithingTemplateItem BLOOMINGMAROON_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplate("bloomingmaroon_armor_trim_smithing_template", settings -> SmithingTemplateItem.of(settings.rarity(Rarity.RARE)));
 
+    public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc", new Item(
+            new Item.Settings().jukeboxPlayable(ModSounds.BAR_BRAWL_KEY).maxCount(1).registryKey(
+                    net.minecraft.registry.RegistryKey.of(
+                            RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "bar_brawl_music_disc")
+                    )
+            )
+    ));
 
     private static SmithingTemplateItem registerSmithingTemplate(String name, Function<Item.Settings, SmithingTemplateItem> function){
         Identifier id = Identifier.of(TutorialMod.MOD_ID, name);

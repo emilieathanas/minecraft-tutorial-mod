@@ -54,7 +54,8 @@
   "sounds.tutorialmod.magic_block_fall": "Magic block falls",
   "sounds.tutorialmod.magic_block_hit": "Magic block hit",
   "sounds.tutorialmod.magic_block_place": "Magic block placed",
-  "sounds.tutorialmod.magic_block_step": "Steps on magic block"
+  "sounds.tutorialmod.magic_block_step": "Steps on magic block",
 
-
+  "item.tutorialmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
+  "item.tutorialmod.bar_brawl_music_disc.dscs": "Bryan Tech - Bar Brawl (CC0)"
 }
