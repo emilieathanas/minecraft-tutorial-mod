@@ -14,6 +14,7 @@ public class SlimeyEffect extends StatusEffect {
 
     @Override
     public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier) {
+        //must set this to true
         entity.velocityModified = true;
         //true if player is colliding with wall
         if (entity.horizontalCollision) {
@@ -22,8 +23,6 @@ public class SlimeyEffect extends StatusEffect {
             Vec3d climbVec = new Vec3d(initialVec.x, 0.2D, initialVec.z);
             entity.setVelocity(climbVec.multiply(0.96D));
             return true;
-        } else{
-            TutorialMod.LOGGER.info("not running");
         }
         return super.applyUpdateEffect(world, entity, amplifier);
     }
