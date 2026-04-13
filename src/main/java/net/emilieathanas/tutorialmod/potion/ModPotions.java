@@ -11,10 +11,10 @@ import net.minecraft.util.Identifier;
 
 public class ModPotions {
 
-    public static RegistryEntry<Potion> SLIMEY_POTION = registerPotion("slimey_potion",
+    public static final RegistryEntry<Potion> SLIMEY_POTION = registerPotion("slimey_potion",
             new Potion("slimey_potion", new StatusEffectInstance(ModEffects.SLIMEY, 600, 0)));
 
-    public static RegistryEntry<Potion> registerPotion(String name, Potion potion){
+    private static RegistryEntry<Potion> registerPotion(String name, Potion potion){
         return Registry.registerReference(Registries.POTION, Identifier.of(TutorialMod.MOD_ID, name), potion);
     }
 
