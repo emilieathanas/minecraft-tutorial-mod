@@ -57,5 +57,7 @@
   "sounds.tutorialmod.magic_block_step": "Steps on magic block",
 
   "item.tutorialmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
-  "item.tutorialmod.bar_brawl_music_disc.dscs": "Bryan Tech - Bar Brawl (CC0)"
+  "item.tutorialmod.bar_brawl_music_disc.dscs": "Bryan Tech - Bar Brawl (CC0)",
+
+  "effect.tutorialmod.slimey": "Slimey"
 }

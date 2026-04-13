@@ -2,6 +2,7 @@ package net.emilieathanas.tutorialmod;
 
 import net.emilieathanas.tutorialmod.block.ModBlocks;
 import net.emilieathanas.tutorialmod.component.ModDataComponentTypes;
+import net.emilieathanas.tutorialmod.effect.ModEffects;
 import net.emilieathanas.tutorialmod.item.ModItemGroups;
 import net.emilieathanas.tutorialmod.item.ModItems;
 import net.emilieathanas.tutorialmod.sounds.ModSounds;
@@ -28,6 +29,7 @@ public class TutorialMod implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
 		ModSounds.registerSounds();
+		ModEffects.registerEffects();
 
         FuelRegistryEvents.BUILD.register(((builder, context) -> {
 			builder.add(ModItems.STARLIGHT_ASHES, 600);
